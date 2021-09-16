@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import MilkaOreo from '../assets/imgs/milka-oreo.png'
 import ArrowImgLeft from '../assets/imgs/arrow-left.png'
 import ArrowImgRight from '../assets/imgs/arrow-right.png'
 
@@ -46,6 +45,12 @@ const ContainerContent = styled.div`
         cursor: pointer;
         font-weight: 500;
         font-size:1em;
+            :hover{
+                    opacity: 0.9;
+                }
+            :active{
+                opacity: 0.7;
+            }
         }
         h2::before{
         content: " ";
@@ -72,7 +77,12 @@ const ContainerContent = styled.div`
             img{
                 filter: drop-shadow(0px 2px 2px #00000089);
             }
-            
+            :hover{
+                opacity: 0.9;
+            }
+            :active{
+                opacity: 0.7;
+            }
         }
     }
 `
@@ -82,19 +92,19 @@ const ChocolateImg = styled.img`
     width: 70%;
     /* margin-left: 40px; */
 `
-const Content = () => {
+const Content = (props) => {
     return ( 
         <ContainerContent>
             <article>
-                <h2>Milka <br /> Oreo</h2>
-                <h3>Chocolate ao leite com pedaços de Oreo</h3>
-                <p>R$14,00</p>
+                <h2>Milka <br />{props.flavor}</h2>
+                <h3>{props.description}</h3>
+                <p>{props.price}</p>
                 <button>Comprar agora</button>
             </article> 
             <section>
-                <button><img src={ArrowImgLeft} alt="seta=para-esquerda" /></button>
-                <ChocolateImg src={MilkaOreo} alt="" />
-                <button><img src={ArrowImgRight} alt="seta=para-direita" /></button>
+                <button onClick={props.btLeft}><img src={ArrowImgLeft} alt="seta-para-esquerda" /></button>
+                <ChocolateImg src={props.chocolateImg} alt={props.altImgChocolate} />
+                <button onClick={props.btRight}><img src={ArrowImgRight} alt="seta-para-direita" /></button>
                     
             </section>           
         </ContainerContent>

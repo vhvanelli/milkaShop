@@ -1,31 +1,14 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Content from "./components/Content";
-import styled from "styled-components";
+import Header from "./components/Header/Header";
+import Content from "./components/Content/Content";
+
 import MilkaOreo from "./assets/imgs/milka-oreo.png";
 import MilkaConfetti from "./assets/imgs/milka-confetti.png";
 import MilkaMousse from "./assets/imgs/milka-mousse.png";
 import MilkaStrawberry from "./assets/imgs/milka-strawberry.png";
 
-const BodyContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #7b69a8;
-  background: linear-gradient(135deg, #7b69a8 20%, rgba(102, 51, 102, 1) 100%);
-  background-size: cover;
-`;
-const BoxContainer = styled.main`
-  /* border: 2px solid #000000; */
-  height: 90vh;
-  width: 90vw;
-  border-radius: 30px;
-  background-color: #f8f3ff;
-  box-shadow: 0 10px 1em rgba(0, 0, 0, 0.25),
-    inset 0 -4px 1.5em rgba(0, 0, 0, 0.25);
-`;
+import { BodyContainer, BoxContainer } from './styles'
+
 const App = () => {
   const [index, setIndex] = useState(0);
   const allChocolates = [

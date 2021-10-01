@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Content from "./components/Content/Content";
 
-import MilkaOreo from "./assets/imgs/milka-oreo.png";
-import MilkaConfetti from "./assets/imgs/milka-confetti.png";
-import MilkaMousse from "./assets/imgs/milka-mousse.png";
-import MilkaStrawberry from "./assets/imgs/milka-strawberry.png";
+// import MilkaOreo from "https://i.imgur.com/ZKuDNWq.png"
+// import MilkaConfetti from "https://i.imgur.com/g4Fddg9.png"
+// import MilkaMousse from "https://i.imgur.com/eXzFC1j.png";
+// import MilkaStrawberry from "https://i.imgur.com/7cZoEqS.png";
 
 import { BodyContainer, BoxContainer } from './styles'
 
@@ -14,28 +14,28 @@ const App = () => {
   const allChocolates = [
     {
       flavor: "Oreo",
-      img: MilkaOreo,
+      img: "https://i.imgur.com/ZKuDNWq.png",
       alt: "chocolate-sabor-oreo",
       description: "Chocolate ao leite recheado com pedaços de Oreo",
       price:"R$ 12,99"
     },
     {
       flavor: "Confetti",
-      img: MilkaConfetti,
+      img: "https://i.imgur.com/g4Fddg9.png",
       alt: "chocolate-sabor-confete",
       description: "Chocolate ao leite com confetes",
       price:"R$ 11,99"
     },
     {
       flavor: "Mousse",
-      img: MilkaMousse,
+      img: "https://i.imgur.com/eXzFC1j.png",
       alt: "chocolate-sabor-mousse",
       description: "Chocolate ao leite recheado com um mousse de chocolate",
       price:"R$ 13,99"
     },
     {
       flavor: "Strawberry",
-      img: MilkaStrawberry,
+      img: "https://i.imgur.com/7cZoEqS.png",
       alt: "chocolate-sabor-morango",
       description: "Chocolate ao leite recheado com pedaços de morango",
       price:"R$ 14,99"
